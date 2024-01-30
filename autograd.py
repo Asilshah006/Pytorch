@@ -30,7 +30,7 @@ import torch
 
 # Example
 
-weights = torch.ones(4, requires_grad=True)
+weights = torch.ones(4, requires_grad=True , dtype=torch.float32)
 
 for epoch in range(2):
     model_output = (weights * 3).sum() 
@@ -43,6 +43,6 @@ for epoch in range(2):
 
 # Optim Method
 
-optimizer = torch.optim.SGD(weights , lr=0.01)
+optimizer = torch.optim.SGD([weights] , lr=0.01)
 optimizer.step()
 optimizer.zero_grad()
