@@ -25,7 +25,7 @@ model = nn.Linear(input_size,output_size)
 
 print(f'Prediction Before Training f(5) = {model(X_test).item():.3f}')
 
-learning_rate = 0.02
+learning_rate = 0.01
 n_iters = 100
 
 loss = nn.MSELoss()
